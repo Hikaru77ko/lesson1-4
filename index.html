@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    'use strict';
+
+let daily_list = {
+  "机を片付ける":"掃除",
+  "牛乳を買う":"買い物",
+  "散歩する":"通勤"
+  };
+
+
+console.log("========================");
+console.log("現在持っているタスク一覧");
+console.log("========================");
+
+let challenge_result = Object.keys(daily_list);
+for(let i = 0; i < challenge_result.length; i++){
+  console.log("[内容]" + challenge_result[i] + "、[ジャンル]" + daily_list[challenge_result[i]]);
+}
+
+
+let content = prompt("タスクを入力してください");
+let genre   = prompt("ジャンルを入力してください"); 
+
+alert("タスクを追加しました");
+
+daily_list[content] =genre;
+
+console.log("========================");
+console.log("現在持っているタスク一覧");
+console.log("========================");
+
+let challenge_result2 = Object.keys(daily_list);
+
+for(let i = 0; i < challenge_result2.length; i++){
+  
+  console.log("[内容]" + challenge_result2[i] + "、[ジャンル]" + daily_list[challenge_result2[i]]);
+}
+
+prompt("「確認,追加,削除,終了」の4つのいずれかを入力してください");
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
