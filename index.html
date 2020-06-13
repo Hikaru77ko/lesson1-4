@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+ 'use strict';
+    
+console.log("========================");
+console.log("現在持っているタスク一覧");
+console.log("========================");
+
+const daily_list = [
+{genre: '掃除', task: '机を片付ける、'},
+{genre: '買い物', task: '牛乳を買う、'},
+{genre: '通勤', task: '散歩する、'},
+];
+
+  daily_list.forEach((key) => {
+  console.log(`[内容]${key.task}[ジャンル]${key.genre}`);
+  });
+
+let add_content = prompt("タスクを入力してください");
+let add_genre   = prompt("ジャンルを入力してください"); 
+
+alert("タスクを追加しました");
+
+daily_list.push({genre:  add_genre, task: add_content})
+
+console.log("========================");
+console.log("現在持っているタスク一覧");
+console.log("========================");
+
+  daily_list.forEach((key) => {
+  console.log(`[内容]${key.task}[ジャンル]${key.genre}`);
+  });
+
+prompt("「確認,追加,削除,終了」の4つのいずれかを入力してください");
+  
+  </script>
+  
+</body>
+</html>
